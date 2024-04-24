@@ -15,12 +15,12 @@ def homepage():
 @app.route("/melons")
 def all_melons():
     melon_list = melons.get_all()
-    return render_template("all_melons.html", melon_list=melon_list)
+    return render_template("all_melons.html", melon_list = melon_list)
 
 @app.route("/melon/<melon_id>")
 def melon_details(melon_id):
     melon = melons.get_by_id(melon_id)
-    return render_template("melon_details.html", melon=melon)
+    return render_template("melon_details.html", melon = melon)
 
 @app.route("/add_to_cart/<melon_id>")
 def add_to_cart(melon_id):

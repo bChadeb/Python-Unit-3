@@ -10,7 +10,7 @@ class Melon:
         self.color = color
         self.seedless = seedless
     def __repr__(self):
-        return(f"<Melon: {self.melon_id}, {self.common_name}>")
+        return f"<Melon: {self.melon_id}, {self.common_name}>"
 
     def price_str(self):
         return f"${self.price:.2f}"
@@ -32,7 +32,7 @@ with open("melons.csv") as csvfile:
         melon_dict[melon_id] = melon
 
 
-def get_id(melon_id):
+def get_by_id(melon_id):
     return melon_dict[melon_id]
 
 def get_all():
